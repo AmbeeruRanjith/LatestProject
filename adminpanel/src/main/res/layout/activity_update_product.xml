@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/updateProductTitle"
+        android:text="Update Product"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/productIdEditText"
+        android:hint="Enter Product ID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="text"
+       />
+
+    <Spinner
+        android:id="@+id/fieldSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+/>
+    <EditText
+        android:id="@+id/newValueEditText"
+        android:hint="Enter New Value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="text"
+        />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:text="Update Product"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="?android:attr/colorPrimary"
+        android:padding="12dp"
+        android:layout_marginTop="20dp" />
+</LinearLayout>
