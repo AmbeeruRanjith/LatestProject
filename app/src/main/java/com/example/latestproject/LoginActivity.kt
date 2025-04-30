@@ -1,10 +1,16 @@
-package com.example.latestproject
-
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.widget.*
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.demoapplication.MainActivity
+import com.example.latestproject.ForgotPasswordActivity
+import com.example.latestproject.R
+import com.example.latestproject.RegisterActivity
+import com.example.latestproject.UserData
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -27,6 +33,14 @@ class LoginActivity : AppCompatActivity() {
         database = FirebaseDatabase.getInstance().getReference("users")
         sharedPref = getSharedPreferences("user_session", MODE_PRIVATE)
 
+        // Check if user is already logged in
+        if (sharedPref.contains("user_id")) {
+            // User is already logged in, redirect to MainActivity
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+            return
+        }
+
         loginBtn.setOnClickListener {
             val email = emailEt.text.toString().trim()
             val password = passwordEt.text.toString().trim()
@@ -42,11 +56,19 @@ class LoginActivity : AppCompatActivity() {
                 if (snapshot.exists()) {
                     val user = snapshot.getValue(UserData::class.java)
                     if (user?.password == password) {
-                        // Save login session
-                        sharedPref.edit().putString("email", email).apply()
+                        // Get the user ID
+                        val userId = snapshot.key ?: key
+
+                        // Save login session with user ID and other important info
+                        with(sharedPref.edit()) {
+                            putString("user_id", userId)
+                            putString("user_email", email)
+                            putString("user_name", user.name ?: "")
+                            apply()
+                        }
 
                         Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this, HomeActivity::class.java))
+                        startActivity(Intent(this, MainActivity::class.java))
                         finish()
                     } else {
                         Toast.makeText(this, "Incorrect password", Toast.LENGTH_SHORT).show()
