@@ -98,7 +98,7 @@ This project is not just a technical solution—it's a step toward social impact
 ## 🧪 Testing & Feedback
 Initial user testing across all three roles showed strong usability and performance even in low-bandwidth environments. Feedback was overwhelmingly positive, especially from rural stakeholders.
 
-📷 Screenshots
+## 📷 Screenshots
 
 ### **Admin Panel**
 
