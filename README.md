@@ -99,8 +99,10 @@ This project is not just a technical solution—it's a step toward social impact
 Initial user testing across all three roles showed strong usability and performance even in low-bandwidth environments. Feedback was overwhelmingly positive, especially from rural stakeholders.
 
 📷 Screenshots
+
 **Admin Panel**
  ![image](https://github.com/user-attachments/assets/62bda0b7-ac29-4b2e-b45a-18caa35207ff)
+
  **Customer Experinece**
  ![image](https://github.com/user-attachments/assets/dfc9d89b-2aed-4dae-8d9d-b3415ba47a3b)
 
