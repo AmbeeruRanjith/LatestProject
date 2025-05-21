@@ -100,11 +100,8 @@ Initial user testing across all three roles showed strong usability and performa
 
 📷 Screenshots
 - **Admin Panel**
-  ![image](https://github.com/user-attachments/assets/e8d66fb7-b042-4bdd-adac-22d57347dbc3)
-
   ![image](https://github.com/user-attachments/assets/62bda0b7-ac29-4b2e-b45a-18caa35207ff)
 
   - **Customer Experinece**
     ![image](https://github.com/user-attachments/assets/dfc9d89b-2aed-4dae-8d9d-b3415ba47a3b)
-    ![image](https://github.com/user-attachments/assets/9267427b-b162-418e-bc9d-a11c677bec67)
 
